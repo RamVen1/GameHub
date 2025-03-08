@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqttxi4576f83"]
+
+[ext_resource type="Script" uid="uid://bnsy4xiwx4wfc" path="res://Scenes/Main menu/game_button.gd" id="1_qnarc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnarc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hof2"]
+bg_color = Color(0.392, 0.24, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gl0s"]
+bg_color = Color(0.164333, 0, 0.58, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cu2tm"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.276727, 0.000197144, 0.871408, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Button" type="Button"]
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qnarc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hof2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3gl0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cu2tm")
+text = "Game 1"
+script = ExtResource("1_qnarc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
