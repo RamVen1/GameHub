@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://v6u12tydg26f"]
+
+[ext_resource type="Script" uid="uid://cytuljhcebvi4" path="res://Scenes/LightsOut/MainMenuButton.gd" id="1_2q57d"]
+
+[node name="LightsOutMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 650.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0.25098, 0.407843, 0.717647, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 20.0
+offset_right = 850.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 70
+text = "Lights Out"
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 500.0
+offset_right = 245.0
+offset_bottom = 600.0
+text = "Back to Main Menu"
+script = ExtResource("1_2q57d")
+game_scene = "uid://6vcfcvr2ovo4"
+
+[node name="RulesButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 500.0
+offset_right = 1100.0
+offset_bottom = 600.0
+text = "Rules"
+
+[node name="MenuPanel" type="PopupPanel" parent="."]
+title = "Rules"
+position = Vector2i(350, 200)
+size = Vector2i(400, 400)
+
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_pressed"]
+[connection signal="pressed" from="RulesButton" to="MainMenuButton" method="_on_rules_button_pressed"]
+[connection signal="ready" from="MenuPanel" to="MainMenuButton" method="_on_menu_panel_ready"]
