@@ -50,7 +50,7 @@ offset_bottom = 600.0
 text = "Rules"
 
 [node name="MenuPanel" type="PopupPanel" parent="."]
-title = "Rules"
+title = "Rules!"
 position = Vector2i(350, 200)
 size = Vector2i(400, 400)
 
